@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "d386b2c77b790102da2ceb7be12f8660d433160b"
+    "signature": "2783fe82747f773a9ab38855d88a3ea323139cf9"
   },
   "compilationOptions": {
     "defines": [
@@ -31,11 +31,10 @@
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.0",
           "NLog": "4.6.3",
+          "NSwag.AspNetCore": "12.3.1",
           "Serilog.AspNetCore": "2.1.1",
           "Serilog.Settings.Configuration": "3.0.1",
-          "Serilog.Sinks.RollingFile": "3.3.0",
-          "Swashbuckle": "5.6.0",
-          "Swashbuckle.AspNetCore": "5.0.0-rc2"
+          "Serilog.Sinks.RollingFile": "3.3.0"
         },
         "runtime": {
           "EmployeeTimeSheet.dll": {}
@@ -74,35 +73,6 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.AspNet.WebApi.Core/4.0.20710": {
-        "dependencies": {
-          "Microsoft.AspNet.WebApi.Client": "5.2.6"
-        },
-        "runtime": {
-          "lib/net40/System.Web.Http.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.20710.0"
-          }
-        },
-        "compile": {
-          "lib/net40/System.Web.Http.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebApi.WebHost/4.0.20710": {
-        "dependencies": {
-          "Microsoft.AspNet.WebApi.Core": "4.0.20710",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        },
-        "runtime": {
-          "lib/net40/System.Web.Http.WebHost.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.20710.0"
-          }
-        },
-        "compile": {
-          "lib/net40/System.Web.Http.WebHost.dll": {}
-        }
-      },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "2.8.0",
@@ -136,17 +106,6 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.CodeAnalysis.Workspaces.dll": {}
-        }
-      },
-      "Microsoft.OpenApi/1.1.1": {
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "assemblyVersion": "1.1.1.0",
-            "fileVersion": "1.1.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
       "Microsoft.VisualStudio.Web.CodeGeneration/2.2.0": {
@@ -269,15 +228,18 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
         }
       },
-      "Microsoft.Web.Infrastructure/1.0.0": {
+      "NJsonSchema/9.14.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
         "runtime": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.20105.407"
+          "lib/netstandard2.0/NJsonSchema.dll": {
+            "assemblyVersion": "9.14.1.0",
+            "fileVersion": "9.14.1.0"
           }
         },
         "compile": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+          "lib/netstandard2.0/NJsonSchema.dll": {}
         }
       },
       "NLog/4.6.3": {
@@ -289,6 +251,109 @@
         },
         "compile": {
           "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
+      "NSwag.Annotations/12.3.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSwag.Annotations.dll": {
+            "assemblyVersion": "12.3.1.0",
+            "fileVersion": "12.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NSwag.Annotations.dll": {}
+        }
+      },
+      "NSwag.AspNetCore/12.3.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.StaticFiles": "2.2.0",
+          "Microsoft.Extensions.FileProviders.Embedded": "2.2.0",
+          "NSwag.Annotations": "12.3.1",
+          "NSwag.Core": "12.3.1",
+          "NSwag.SwaggerGeneration": "12.3.1",
+          "NSwag.SwaggerGeneration.AspNetCore": "12.3.1",
+          "NSwag.SwaggerGeneration.WebApi": "12.3.1",
+          "System.IO.FileSystem": "4.3.0",
+          "System.Xml.XPath.XDocument": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSwag.AspNetCore.dll": {
+            "assemblyVersion": "12.3.1.0",
+            "fileVersion": "12.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NSwag.AspNetCore.dll": {}
+        }
+      },
+      "NSwag.Core/12.3.1": {
+        "dependencies": {
+          "NJsonSchema": "9.14.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSwag.Core.dll": {
+            "assemblyVersion": "12.3.1.0",
+            "fileVersion": "12.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NSwag.Core.dll": {}
+        }
+      },
+      "NSwag.SwaggerGeneration/12.3.1": {
+        "dependencies": {
+          "NJsonSchema": "9.14.1",
+          "NSwag.Core": "12.3.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.dll": {
+            "assemblyVersion": "12.3.1.0",
+            "fileVersion": "12.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.dll": {}
+        }
+      },
+      "NSwag.SwaggerGeneration.AspNetCore/12.3.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "NJsonSchema": "9.14.1",
+          "NSwag.SwaggerGeneration": "12.3.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.AspNetCore.dll": {
+            "assemblyVersion": "12.3.1.0",
+            "fileVersion": "12.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.AspNetCore.dll": {}
+        }
+      },
+      "NSwag.SwaggerGeneration.WebApi/12.3.1": {
+        "dependencies": {
+          "NJsonSchema": "9.14.1",
+          "NSwag.SwaggerGeneration": "12.3.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.WebApi.dll": {
+            "assemblyVersion": "12.3.1.0",
+            "fileVersion": "12.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.WebApi.dll": {}
         }
       },
       "NuGet.Frameworks/4.7.0": {
@@ -415,95 +480,6 @@
         },
         "compile": {
           "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll": {}
-        }
-      },
-      "Swashbuckle/5.6.0": {
-        "dependencies": {
-          "Microsoft.AspNet.WebApi.WebHost": "4.0.20710",
-          "Swashbuckle.Core": "5.6.0",
-          "WebActivatorEx": "2.0.0"
-        }
-      },
-      "Swashbuckle.AspNetCore/5.0.0-rc2": {
-        "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "5.0.0-rc2",
-          "Swashbuckle.AspNetCore.SwaggerGen": "5.0.0-rc2",
-          "Swashbuckle.AspNetCore.SwaggerUI": "5.0.0-rc2"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.Swagger/5.0.0-rc2": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
-          "Microsoft.OpenApi": "1.1.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/5.0.0-rc2": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.2.0",
-          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
-          "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.2.0",
-          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
-          "Microsoft.OpenApi": "1.1.1",
-          "Swashbuckle.AspNetCore.Swagger": "5.0.0-rc2"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/5.0.0-rc2": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Routing": "2.2.0",
-          "Microsoft.AspNetCore.StaticFiles": "2.2.0",
-          "Microsoft.Extensions.FileProviders.Embedded": "2.2.0",
-          "Newtonsoft.Json": "11.0.2"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
-        }
-      },
-      "Swashbuckle.Core/5.6.0": {
-        "dependencies": {
-          "Microsoft.AspNet.WebApi.Core": "4.0.20710",
-          "Newtonsoft.Json": "11.0.2"
-        },
-        "runtime": {
-          "lib/net40/Swashbuckle.Core.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/net40/Swashbuckle.Core.dll": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -648,20 +624,6 @@
           "Microsoft.NETCore.Platforms": "2.2.0",
           "Microsoft.NETCore.Targets": "2.0.0",
           "System.Runtime": "4.3.0"
-        }
-      },
-      "WebActivatorEx/2.0.0": {
-        "dependencies": {
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        },
-        "runtime": {
-          "lib/net40/WebActivatorEx.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/net40/WebActivatorEx.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3880,20 +3842,6 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/6.1.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.6.1.0.nupkg.sha512"
     },
-    "Microsoft.AspNet.WebApi.Core/4.0.20710": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-X188VBhKSs3mlDcUVPuOMv2+f6Kxg4xcEobtdFzJLCA5Q9z0oQ9qWTFgBtlN5vbx0bhlQRDD7P6krxLeiHsBgA==",
-      "path": "microsoft.aspnet.webapi.core/4.0.20710",
-      "hashPath": "microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512"
-    },
-    "Microsoft.AspNet.WebApi.WebHost/4.0.20710": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-rfDCy8t17L5974eoOmoC/VeuAAzLytK8rAtFd0BfaOUqCOWqysoLKzGOpA2tr13ZDbzPWuvVbe4B/GgE4+7+4w==",
-      "path": "microsoft.aspnet.webapi.webhost/4.0.20710",
-      "hashPath": "microsoft.aspnet.webapi.webhost.4.0.20710.nupkg.sha512"
-    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -3907,13 +3855,6 @@
       "sha512": "sha512-AqCiNju6UZy9Sd8HKzxGbpbZf+P8gWpojfvs9hIRfwstqFMZ6OJXf69EUvqJ5C4rWrcf08F7G8WII74KBEFImQ==",
       "path": "microsoft.codeanalysis.workspaces.common/2.8.0",
       "hashPath": "microsoft.codeanalysis.workspaces.common.2.8.0.nupkg.sha512"
-    },
-    "Microsoft.OpenApi/1.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-m+r0b8tA6uf9m0R99/qTOd5cxoG4/PHbCcWRrig/e3mYqpDbD3c2GueN4kuuhwYSWv1Bf0kOOoKRvK3DpmEIPA==",
-      "path": "microsoft.openapi/1.1.1",
-      "hashPath": "microsoft.openapi.1.1.1.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.2.0": {
       "type": "package",
@@ -3971,12 +3912,12 @@
       "path": "microsoft.visualstudio.web.codegenerators.mvc/2.2.0",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.2.2.0.nupkg.sha512"
     },
-    "Microsoft.Web.Infrastructure/1.0.0": {
+    "NJsonSchema/9.14.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Bk+FleE3WkOCB707+eD9npx38gvHCA4FikXSW1ETDa+A0IPrhPTWpu/nLGAGxkkXePVRB+nwjDY1ZOs5aE6YBg==",
-      "path": "microsoft.web.infrastructure/1.0.0",
-      "hashPath": "microsoft.web.infrastructure.1.0.0.nupkg.sha512"
+      "sha512": "sha512-UfEVMm+XQskr/DIjHLlnBrDsgyzEzBUaYTsUM6KS+RLvTx8HbWp0CZG6ecMnisq1cTdCvRjWtDY0vRoFchpr1A==",
+      "path": "njsonschema/9.14.1",
+      "hashPath": "njsonschema.9.14.1.nupkg.sha512"
     },
     "NLog/4.6.3": {
       "type": "package",
@@ -3984,6 +3925,48 @@
       "sha512": "sha512-2GtWHRCpLE4R8NucdnmJ5n0snFPV3fOVxIDa435+QxqArOs5c8YtwwDbBYIm9RHflJepUAZJpi8wZUaC/p1E6w==",
       "path": "nlog/4.6.3",
       "hashPath": "nlog.4.6.3.nupkg.sha512"
+    },
+    "NSwag.Annotations/12.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YCBKAwhc+kKUL3vYIz4cLjoxChKTfzrxaox+m7vJBXym3bk5kVDfjTH9KulWCuTeHcBQN1syqH/pITRF0sGhQQ==",
+      "path": "nswag.annotations/12.3.1",
+      "hashPath": "nswag.annotations.12.3.1.nupkg.sha512"
+    },
+    "NSwag.AspNetCore/12.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+WbTopZ8kbddi+JaS4VD2F1k598/6JXbP3rLWFnNMpTBRAvjnuiVJzwsSGfdFRiaBXwcoTAH4eO0SijwmG9/jw==",
+      "path": "nswag.aspnetcore/12.3.1",
+      "hashPath": "nswag.aspnetcore.12.3.1.nupkg.sha512"
+    },
+    "NSwag.Core/12.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0vn11Ts8lA0HD9v2laBFj+XpxTwevVS7KfOf0u+qjTAye/5jWT0SUBPxdR/JB1jnV7ARDObqvEg7sUUUOgmIww==",
+      "path": "nswag.core/12.3.1",
+      "hashPath": "nswag.core.12.3.1.nupkg.sha512"
+    },
+    "NSwag.SwaggerGeneration/12.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wMmSK/MbgIlNR+J5I+8dCcWm4CCbAxntvRZTspyu+fP960LaMqGOn9Dr4va75YQKPIlmCQX+89EDcLzNgV5INQ==",
+      "path": "nswag.swaggergeneration/12.3.1",
+      "hashPath": "nswag.swaggergeneration.12.3.1.nupkg.sha512"
+    },
+    "NSwag.SwaggerGeneration.AspNetCore/12.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OVzUxjtiRCY7ywFX8Zs5EEPLSdMCYVo8oQU9+CsE1kPbzZNY5PspkOSxHIXt511fyB36BlsLDLfoHZ01OjGFyw==",
+      "path": "nswag.swaggergeneration.aspnetcore/12.3.1",
+      "hashPath": "nswag.swaggergeneration.aspnetcore.12.3.1.nupkg.sha512"
+    },
+    "NSwag.SwaggerGeneration.WebApi/12.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Tgese66fEh/cfzvpMsqGy26driZQz/40159tNr1qCx2EwcmFN8Sb0Aw+E4uah5vGB3EIT6B1c/vLOBu8anfwMw==",
+      "path": "nswag.swaggergeneration.webapi/12.3.1",
+      "hashPath": "nswag.swaggergeneration.webapi.12.3.1.nupkg.sha512"
     },
     "NuGet.Frameworks/4.7.0": {
       "type": "package",
@@ -4033,48 +4016,6 @@
       "sha512": "sha512-iBTJlu/YGishKRZ5SkSXkAly3zSezopfnKWbbh4eesHAacMqv7G+Cx32ytlkjbmymMWYB/nrNwS4IBSqAiF/OA==",
       "path": "serilog.sinks.rollingfile/3.3.0",
       "hashPath": "serilog.sinks.rollingfile.3.3.0.nupkg.sha512"
-    },
-    "Swashbuckle/5.6.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ZN+lLojS3uJm/0RB8VaFIMrNPfL+K8FS4QL9CsR+nU22QemERHoeIOEXyj9bdYXZa1PfZI4vhNzzt8V1uU29MQ==",
-      "path": "swashbuckle/5.6.0",
-      "hashPath": "swashbuckle.5.6.0.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore/5.0.0-rc2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3sqU7e29kj6KvuCUskqvuwUtlqBLKIWkqcnhg/AaqyL5XSw3DIn6kPMb/FYQAmZj6V+UEfMkmTMMFdLImR5A0Q==",
-      "path": "swashbuckle.aspnetcore/5.0.0-rc2",
-      "hashPath": "swashbuckle.aspnetcore.5.0.0-rc2.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.Swagger/5.0.0-rc2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Q6TlQIC91w5J6jv1VJFu8x4gzKbdlSPNgUS8tJilyCsDY1h+1EKPOoZz9NOZP4yBJgLcga2tPcVe3arkr47XcA==",
-      "path": "swashbuckle.aspnetcore.swagger/5.0.0-rc2",
-      "hashPath": "swashbuckle.aspnetcore.swagger.5.0.0-rc2.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/5.0.0-rc2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cwrJAtc2CC3qMwbYkERitapUnMf2F6wv06+YaNCj8j6xUO2Ifn+gRdSyPjvqhFhh4c1+T9H7UXLWmc1ToqyztA==",
-      "path": "swashbuckle.aspnetcore.swaggergen/5.0.0-rc2",
-      "hashPath": "swashbuckle.aspnetcore.swaggergen.5.0.0-rc2.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/5.0.0-rc2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-EMydI2+L0p+IrejQ7cuJeLvVf09nPQYOpW/B/D9TV1eysonrn54GCs8iJz2QSh9XAc2iiz70Oh/QGkuVWhSOdw==",
-      "path": "swashbuckle.aspnetcore.swaggerui/5.0.0-rc2",
-      "hashPath": "swashbuckle.aspnetcore.swaggerui.5.0.0-rc2.nupkg.sha512"
-    },
-    "Swashbuckle.Core/5.6.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-z9vNASP0pxiRzs16dY8kTctUuKLD4ZpmUo8QGijE2p01Ne4fvKll1Oa6eEXZ5NxrBBrRN3SY9qWIkot5yvbt/Q==",
-      "path": "swashbuckle.core/5.6.0",
-      "hashPath": "swashbuckle.core.5.6.0.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",
@@ -4131,13 +4072,6 @@
       "sha512": "sha512-saGfUV8uqVW6LeURiqxcGhZ24PzuRNaUBtbhVeuUAvky1naH395A/1nY0P2bWvrw/BreRtIB/EzTDkGBpqCwEw==",
       "path": "system.threading.timer/4.0.1",
       "hashPath": "system.threading.timer.4.0.1.nupkg.sha512"
-    },
-    "WebActivatorEx/2.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-tRjfE5uR1fnSJzWWpMRY2ZdsdA/+ItDz0TbrgVXGFM+32CFEPEXsikDraEPx/mfB6xZd9mDzwEGPkzI8M+bdGA==",
-      "path": "webactivatorex/2.0.0",
-      "hashPath": "webactivatorex.2.0.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
