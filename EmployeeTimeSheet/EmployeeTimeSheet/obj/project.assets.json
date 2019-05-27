@@ -13540,11 +13540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nesma.ali\\Desktop\\EmployeeTimeSheet\\EmployeeTimeSheet\\EmployeeTimeSheet.csproj",
+      "projectUniqueName": "C:\\Users\\nesma.ali\\Desktop\\TimeSheet\\EmployeeTimeSheet\\EmployeeTimeSheet\\EmployeeTimeSheet.csproj",
       "projectName": "EmployeeTimeSheet",
-      "projectPath": "C:\\Users\\nesma.ali\\Desktop\\EmployeeTimeSheet\\EmployeeTimeSheet\\EmployeeTimeSheet.csproj",
+      "projectPath": "C:\\Users\\nesma.ali\\Desktop\\TimeSheet\\EmployeeTimeSheet\\EmployeeTimeSheet\\EmployeeTimeSheet.csproj",
       "packagesPath": "C:\\Users\\nesma.ali\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nesma.ali\\Desktop\\EmployeeTimeSheet\\EmployeeTimeSheet\\obj\\",
+      "outputPath": "C:\\Users\\nesma.ali\\Desktop\\TimeSheet\\EmployeeTimeSheet\\EmployeeTimeSheet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

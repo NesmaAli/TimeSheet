@@ -12,3 +12,17 @@ C:\Users\nesma.ali\Desktop\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcore
 C:\Users\nesma.ali\Desktop\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.dll
 C:\Users\nesma.ali\Desktop\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.pdb
 C:\Users\nesma.ali\Desktop\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.csprojAssemblyReference.cache
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\bin\Debug\netcoreapp2.2\EmployeeTimeSheet.deps.json
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\bin\Debug\netcoreapp2.2\EmployeeTimeSheet.runtimeconfig.json
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\bin\Debug\netcoreapp2.2\EmployeeTimeSheet.runtimeconfig.dev.json
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\bin\Debug\netcoreapp2.2\EmployeeTimeSheet.dll
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\bin\Debug\netcoreapp2.2\EmployeeTimeSheet.pdb
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.csprojAssemblyReference.cache
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.csproj.CoreCompileInputs.cache
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.RazorAssemblyInfo.cache
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.RazorAssemblyInfo.cs
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.AssemblyInfoInputs.cache
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.AssemblyInfo.cs
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.RazorTargetAssemblyInfo.cache
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.dll
+C:\Users\nesma.ali\Desktop\TimeSheet\EmployeeTimeSheet\EmployeeTimeSheet\obj\Debug\netcoreapp2.2\EmployeeTimeSheet.pdb

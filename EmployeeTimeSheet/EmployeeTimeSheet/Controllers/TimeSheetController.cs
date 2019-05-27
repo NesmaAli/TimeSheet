@@ -30,7 +30,9 @@ namespace EmployeeTimeSheet.Controllers
     [HttpGet]
         public async  Task<IActionResult> GetAsync(string id,string status,string year,string month)
         {
-
+            var client = new HttpClient();
+            string Uri;
+ 
             if (id ==null )
             {
                 _logger.LogError("should insert id" );
@@ -45,14 +47,28 @@ namespace EmployeeTimeSheet.Controllers
                 _logger.LogError("should insert correct id ");
                 return BadRequest(new { message = "should insert correct id " });
             }
+            if (month != null && year != null)
+            {
+                int required_month = (Convert.ToInt32(month));
+                int required_year = (Convert.ToInt32(year));
+                DateTime start_date = new DateTime(required_year, required_month, 1, 0, 0, 0, DateTimeKind.Utc);
+                DateTime end_date = new DateTime(required_year, required_month + 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
-           
+                end_date = end_date.Subtract(TimeSpan.FromDays(1));
+                var start = start_date.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'");
+                var end = end_date.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'");
+                Uri = "https://sandbox.api.sap.com/successfactors/odata/v2/EmployeeTime?%24top=20&%24filter=userId%20eq%20" + id + "%20and%20approvalStatus%20eq%20'" + status + "'%20%20and%20startDate%20gt%20datetime'" + start + "'%20and%20startDate%20lt%20datetime'" + end + "'&%24select=approvalStatus,endDate,startDate,timeType,userId";
 
-            var client = new HttpClient();
-           
-          var Uri = "https://sandbox.api.sap.com/successfactors/odata/v2/EmployeeTime?filter=userId eq  "+ id +" and approvalStatus eq '" + status+"'&%24select=approvalStatus,endDate,startDate,timeType,userId" ;
 
-            //var Uri = "https://sandbox.api.sap.com/successfactors/odata/v2/EmployeeTime";
+            }
+            else
+            {
+                Uri = "https://sandbox.api.sap.com/successfactors/odata/v2/EmployeeTime?filter=userId eq  "+ id +" and approvalStatus eq '" + status+"'&%24select=approvalStatus,endDate,startDate,timeType,userId" ;
+
+            }
+
+
+            
 
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -68,10 +84,8 @@ namespace EmployeeTimeSheet.Controllers
                
 
 
-                if (month != null && year != null)
-                {
-                    data = Content.d.results
-                       .Where(x => x.startDate.Month == (Convert.ToInt32(month)) && x.startDate.Year == (Convert.ToInt32(year)))
+                
+                data = Content.d.results
                        .Select(x => new RData
                        {
                            approvalStatus = x.approvalStatus,
@@ -80,21 +94,6 @@ namespace EmployeeTimeSheet.Controllers
                            startDate = x.startDate,
                        })
                         .ToList();
-                }
-                else
-                {
-                    data = Content.d.results
-                        .Select(x => new RData
-                        {
-                            approvalStatus = x.approvalStatus,
-                            endDate = x.endDate,
-                            timeType = x.timeType,
-                            startDate = x.startDate,
-                        })
-                         .ToList();
-                }
-
-
 
                 if (data == null)
                 {
