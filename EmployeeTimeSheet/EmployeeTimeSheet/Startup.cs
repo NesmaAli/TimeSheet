@@ -44,6 +44,8 @@ namespace EmployeeTimeSheet
             services.AddHttpClient();
 
             services.AddSwaggerDocument();
+            services.AddSingleton<IConfiguration>(Configuration);
+
 
 
 
